@@ -1,0 +1,43 @@
+#!/usr/bin/env php
+<?php
+/*
+  (Q1) Write code in any language that takes any number (from 2 to 100) and outputs the factorial of that number. *
+ */
+$goal = "Please enter a number from 2 to 100";
+function calcualte_factorials($n)
+{
+  $result = $n;
+  for ($i=--$n; $i > 0; $i--) {
+    $result = $result * $i;
+  }
+  return $result;
+}
+/*
+  validate input are integer and it's between 2 and 100
+ */
+function is_valid_input($n = null)
+{
+  if ((int)$n == $n && $n >= 2 && $n <= 100)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+}
+
+while (true) {
+  $line = readline("{$goal}, Or exit to end the program: ");
+  if ($line == 'exit')
+  {
+    break;
+  }
+  if (!is_valid_input($line))
+  {
+    echo $goal."\n";
+    continue;
+  }
+  echo calcualte_factorials($line)."\n";
+}
+?>
