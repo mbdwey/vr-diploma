@@ -1,5 +1,5 @@
 # vr-diploma
-Just ansers to basic programming skilles questions 
+Just answers to basic programming skilles questions 
 
 # To run the programm
  * Make sure you got PHP cli installed
