@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+/*
+(Q2) Write code in any language that prints the multiplication tables for numbers (1 to 9). The output should be close to the picture below (but do not worry about the formating)
+ >> As you permitted I don't follow the 6 columns foreach row formate
+ */
+$range = range(1,9);
+$max = 12;
+foreach ($range as $current) {
+  for ($i=1; $i <= $max; $i++) {
+    echo "{$current} * {$i} = ".($current*$i)."\n";
+  }
+  echo "------------ \n";
+}
+?>
